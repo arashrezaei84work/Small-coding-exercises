@@ -2,11 +2,14 @@
     This is just an exercise for Maktabkhoone
 """
 from abc import ABC, abstractmethod
+import string
+import random
 import secrets
 
 
 class Father(ABC):
-    letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    asci = string.ascii_letters
+    letters = "".join(random.choices(asci, k=10))
     numbers = "0123456789"
 
     @abstractmethod
